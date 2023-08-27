@@ -3,23 +3,26 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#challanger-weapon {
+#challenger-weapon {
     margin-top: 15px;
     width: 260px;
     height: 260px;
     background-color: pink;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
 }
 
 #user-points {
     margin-top: 15px;
     width: 260px;
     height: 260px;
-    background-color: yellow;
+    background-color: gray;
 }
 
 #inventory {
-    height: 90px;
-    width: 270px;
+    display: flex;
+    justify-content: center;
     margin-top: 15px;
     background-color: blue;
 }
@@ -27,4 +30,19 @@ body {
 #inventory img {
     height: 90px;
     width: 90px;
+    cursor: pointer;
+}
+
+#user-weapon {
+    margin-top: 15px;
+    width: 260px;
+    height: 260px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.choice.selected {
+    border: 2px solid red;
 }
