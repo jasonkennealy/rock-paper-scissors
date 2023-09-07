@@ -1,77 +1,115 @@
 body {
-  text-align: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin: 0;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin: 0;
+    min-height: 100vh;
 }
 
 header {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .score-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
-.user-weapon-choice {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 230px;
-  height: 230px;
-  background-color: lightgreen;
-  border-radius: 100%;
+.challenger-score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgreen;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto;
+}
+
+.user-score-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto;
 }
 
 .challenger-weapon-choice {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 230px;
-  height: 230px;
-  background-color: pink;
-  border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 230px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.user-weapon-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 230px;
+    background-color: pink;
+    border-radius: 50%;
+    margin-top: 20px;
 }
 
 .icon {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.weapons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .weapon-1,
 .weapon-2,
 .weapon-3 {
-  margin-top: 15px;
-  width: 180px;
-  height: 180px;
-  background-color: #b6d8f2;
-  border-radius: 50%;
-  overflow: hidden;
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
-.weapons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 180px;
+    height: 180px;
+    background-color: #b6d8f2;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .weapon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 20px;
 }
 
 .weapon-choice {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
