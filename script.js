@@ -1,54 +1,45 @@
-var user;
-var yourPoints = 0;
-var challenger;
-var opponentScore = 0;
+var userScore = 0;
+var challengerScore = 0;
 
-var inventory = ["rock", "paper", "scissors"];
-
-window.onload = function () {
-    for (let i = 0; i < inventory.length; i++) {
-    
-        let choice = document.createElement("img");
-        choice.id = inventory[i];
-        choice.src = inventory[i] + ".png";
-        choice.classList.add("choice");
-        choice.addEventListener("click", function () {
-            if (selectedChoice) {
-                selectedChoice.classList.remove("selected");
-            }
-
-            selectedChoice = choice;
-            choice.classList.add("selected");
-
-            user = inventory[i];
-            playRound();
-        });
-
-        document.querySelector(".weapon-" + (i + 1)).style.backgroundImage = "url(" + inventory[i] + ".png)";
-
-       
-        document.getElementById("inventory").appendChild(choice);
-    }
-};
-
-function playRound() {
-    challenger = inventory[Math.floor(Math.random() * inventory.length)];
-    document.getElementById("challenger-weapon").src = challenger + ".png";
-
-    if ((user === "rock" && challenger === "scissors") ||
-        (user === "paper" && challenger === "rock") ||
-        (user === "scissors" && challenger === "paper")) {
-        yourPoints++;
-    } else if (user !== challenger) {
-        opponentScore++;
-    }
-
-    document.getElementById("user-points").textContent = yourPoints;
-    document.getElementById("challenger-points").textContent = opponentScore;
-}
-
+var weapons = ["rock", "paper", "scissors"];
 var selectedChoice = null;
 
-    }
+window.onload = function () {
+  const weaponImages = document.querySelectorAll(".weapon img");
+  weaponImages.forEach((img) => {
+    img.addEventListener("click", () => {
+      if (selectedChoice) {
+        selectedChoice.classList.remove("selected");
+      }
+
+      selectedChoice = img;
+      selectedChoice.classList.add("selected");
+
+      const userWeapon = img.getAttribute("data-weapon");
+
+      playRound(userWeapon);
+    });
+  });
 };
 
+function playRound(userWeapon) {
+  const challengerWeapon = weapons[Math.floor(Math.random() * weapons.length)];
+
+  document.getElementById("user-weapon-img").src = `${userWeapon}.png`;
+  document.getElementById(
+    "challenger-weapon-img"
+  ).src = `${challengerWeapon}.png`;
+
+  if (userWeapon === challengerWeapon) {
+  } else if (
+    (userWeapon === "rock" && challengerWeapon === "scissors") ||
+    (userWeapon === "paper" && challengerWeapon === "rock") ||
+    (userWeapon === "scissors" && challengerWeapon === "paper")
+  ) {
+    userScore++;
+  } else {
+    challengerScore++;
+  }
+  document.getElementById("user-points").textContent = userScore;
+  document.getElementById("challenger-points").textContent = challengerScore;
+}

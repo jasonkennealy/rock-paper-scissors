@@ -1,27 +1,63 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rock & Paper & Scissors</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
-
-    <body>
-        <div class="score-container">
-            <h1 id="challenger-points" class="challenger-score">0</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Rock, Paper, Scissors</h1>
+    </header>
+    <main>
+      <div class="score-container">
+        <div class="score user-score">
+          <p id="user-points">0</p>
+          <h2>User Score</h2>
         </div>
-        <h2>Challenger Score</h2>
-        <img id="challenger-weapon">
-        <img id="user-weapon">
-        <br>
-        <div class="weapon-1"></div>
-        <div class="weapon-2"></div>
-        <div class="weapon-3"></div>
-        <div class="score-container">
-            <h1 id="user-points" class="user-score">0</h1>
+        <div class="score challenger-score">
+          <p id="challenger-points">0</p>
+          <h2>Challenger Score</h2>
         </div>
-        <h2>User Score</h2>
-    </body>
+      </div>
+      <div class="weapon-choice">
+        <div class="weapon">
+          <div class="user-weapon-choice">
+            <h2>Your Weapon</h2>
+            <img class="icon" id="user-weapon-img" alt="Your Weapon" />
+          </div>
+        </div>
+        <div class="weapon-choice">
+          <div class="weapon">
+            <div class="challenger-weapon-choice">
+              <h2>Challenger's Weapon</h2>
+              <img
+                class="icon"
+                id="challenger-weapon-img"
+                alt="Challenger's Weapon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="weapons">
+        <div class="weapon weapon-1">
+          <img class="icon" src="rock.png" alt="Rock" data-weapon="rock" />
+        </div>
+        <div class="weapon weapon-2">
+          <img class="icon" src="paper.png" alt="Paper" data-weapon="paper" />
+        </div>
+        <div class="weapon weapon-3">
+          <img
+            class="icon"
+            src="scissors.png"
+            alt="Scissors"
+            data-weapon="scissors"
+          />
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
